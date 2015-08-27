@@ -1,0 +1,23 @@
+{{#if isFinished}}
+  <h5 id="loading-bar-text" class="pull-left">{{uploadContainer.uploadCount}} files uploaded</h5>
+{{else}}
+  <h5 id="loading-bar-text" class="pull-left">{{uploadContainer.uploadsRemaining}} files remaining</h5>
+{{/if}}
+  <i class="fa fa-times pull-right close-loading-bar-button" {{action "closeLoadingBar"}}></i>
+  {{#if isFinished}}
+  {{else}}
+    {{#if isUploading}}
+      <i class="pull-right close-loading-bar-button seconds-remaining-text"><i class="fa fa-refresh fa-spin"></i> Uploading to Server...</i>
+    {{else}}
+      <i class="pull-right close-loading-bar-button seconds-remaining-text"><i class="fa fa-refresh fa-spin"></i> Processing Upload - {{socketContainer.secondsRemaining}} seconds remaining</i>
+    {{/if}}
+  {{/if}}
+<br>
+<br>
+<div class="float-clear"></div>
+
+  <div class="progress" id="loading-bar">
+    <div class="progress-bar {{progressStatusClass}}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+      <span class="sr-only">abc</span>
+    </div>
+  </div>

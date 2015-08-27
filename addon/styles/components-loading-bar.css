@@ -1,0 +1,50 @@
+.upload-form{
+  opacity:0;
+  width:0px;
+  height:0px;
+}
+
+.loading-bar-container{
+  position:absolute;
+  bottom:0px;
+  width:702px;
+  margin-left:234px;
+  border-radius:3px;
+  bottom:20px;
+  z-index:1000;
+  background:white;
+  display:none;
+}
+
+.processing-border{
+  border:1px solid #eea236;
+}
+
+.uploading-border{
+  border:1px solid #2e6da4;
+}
+
+.finished-border{
+  border:1px solid #4cae4c;
+}
+
+.progress{
+  margin:0px;
+  padding:0px;
+  height:7px;
+}
+
+.close-loading-bar-button{
+  padding-right:10px;
+  padding-top:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+#loading-bar-text{
+  margin-left:10px;
+}
+
+.seconds-remaining-text{
+  font-size:14px;
+}
