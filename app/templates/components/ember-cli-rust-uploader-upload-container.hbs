@@ -1,0 +1,24 @@
+{{#if this.applicationState.isDevelopment}}
+
+  {{ember-cli-rust-uploader-upload-handler  engagement=engagement uploadType=currentUploadType formName="upload_transaction_inserts_form" formUrl="http://localhost:5000/api/customer_risk_ratings/rust_http/upload_transaction_inserts" buttonLabel="Upload Transactions(Inserts)" uploadContainer=this}}
+  {{ember-cli-rust-uploader-upload-handler  engagement=engagement uploadType=currentUploadType formName="upload_risk_thresholds_form" formUrl="http://localhost:3000/api/customer_risk_ratings/rust_http/upload_risk_thresholds" buttonLabel="Upload Risk Thresholds" uploadContainer=this}}
+{{else}}
+  {{ember-cli-rust-uploader-upload-handler engagement=engagement uploadType=currentUploadType formName="upload_transaction_inserts_form" formUrl="https://toolbelt.kaufmanrossin.com/api/customer_risk_ratings/rust_http/upload_transaction_inserts" buttonLabel="Upload Transactions(Inserts)" uploadContainer=this}}
+  {{ember-cli-rust-uploader-upload-handler  engagement=engagement uploadType=currentUploadType formName="upload_risk_thresholds_form" formUrl="https://toolbelt.kaufmanrossin.com/api/customer_risk_ratings/rust_http/upload_risk_thresholds" buttonLabel="Upload Risk Thresholds" uploadContainer=this}}
+{{/if}}
+<div class="float-clear"></div>
+{{ember-cli-rust-uploader-loading-bar uploadContainer=this }}
+<br>
+<div class="btn-group">
+  {{#link-to "engagements" class="back-button btn btn-default"}}<i class="fa fa-arrow-circle-left"></i> Back{{/link-to}}
+  <button type="button" class="btn btn-default" {{action "triggerUpload" currentUploadFormName}}>Upload {{currentUploadType}}</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    {{#each uploadTypesKeys as |key|}}
+      <li><a href="#" {{action "setCurrentUploadType" key}}>{{key}}</a></li>
+    {{/each}}
+  </ul>
+</div>

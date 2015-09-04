@@ -1,0 +1,39 @@
+.rmenu{
+	z-index:100000;
+	position:absolute;
+	background-color: white;
+	border-radius:5px;
+	box-shadow: 1px 2px 5px #888888;
+	font-weight:bold;
+	margin-top:5px;
+	margin-bottom:5px;
+  display:none;
+  width:150px;
+	padding-bottom:3px;
+	padding-top:3px;
+}
+
+.rmenu div:first-child:hover{
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.rmenu div:last-child:hover{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.rmenu div:hover{
+	background:#e3f2ff;
+	cursor:pointer;
+
+}
+.rmenu div{
+	padding:8px;
+	text-align:left;
+
+}
+
+.rmenu hr{
+	margin:0px;
+}

@@ -1,0 +1,6 @@
+<li class="list-group-item">
+  {{dataSource.id}}
+  <span class="badge">{{dataSource.lineCount}}</span>
+  <span class="text-primary">{{dataSource.filename}}</span> - <i>{{dataSource.humanCreatedAt}}</i>
+  {{ember-cli-rust-uploader-right-click-menu xPosition=rightClickX yPosition=rightClickY dataSource=dataSource}}
+</li>

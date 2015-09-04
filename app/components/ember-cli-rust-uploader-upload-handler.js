@@ -1,4 +1,4 @@
 import Ember from 'ember';
-import LoadingBar from 'uploader-frontend/components/loading-bar';
+import UploadHandler from 'ember-cli-rust-uploader/components/upload-handler';
 
-export default LoadingBar;
+export default UploadHandler;

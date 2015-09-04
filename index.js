@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'uploader-frontend'
+  name: 'ember-cli-rust-uploader'
 };

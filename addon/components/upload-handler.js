@@ -26,7 +26,7 @@ export default Ember.Component.extend({
         component.sendAction("finishUploadActionName")
       },
       progress:function(e,data){
-        if(this.get("loadingBarEnabled")){
+        if(component.get("loadingBarEnabled")){
           var progress = parseInt(data.loaded / data.total * 100, 10);
           if(progress===100){
             component.sendAction("startProcessingActionName");
@@ -35,7 +35,7 @@ export default Ember.Component.extend({
         }
       },
       add:function(e,data){
-        if(this.get("loadingBarEnabled")){
+        if(component.get("loadingBarEnabled")){
           $(".loading-bar-container").css("display","inline-block");
           $("#loading-bar").find(".progress-bar").css('width', '0%');
         }

@@ -1,4 +1,4 @@
-# Uploader-frontend
+# ember-cli-rust-uploader
 
 This README outlines the details of collaborating on this Ember addon.
 
