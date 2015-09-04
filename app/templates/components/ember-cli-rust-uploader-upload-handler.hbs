@@ -1,0 +1,6 @@
+<form action={{formUrl}}  id={{formName}} enctype="multipart/form-data" class="upload-form" method="post">
+  <input class="input_field" multiple="multiple" type="file" value="file" name="file" accept="audio/*|video/*|image/*|MIME_type"/>
+  {{input type="hidden" name="socket_id" value=socketContainer.socketId}}
+  {{input type="hidden" name="upload_type" value=uploadType}}
+  {{input type="hidden" name="engagement_id" value=engagement.id}}
+</form>
