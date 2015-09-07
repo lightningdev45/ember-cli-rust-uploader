@@ -50,7 +50,7 @@ export default Ember.Component.extend({
             }else{
               fileTypesOk=false;
             }
-            if(file.size/(1024*1024)<=100){
+            if(file.size/(1024*1024)<=1000){
               fileSizeOk=true;
             }else{
               fileSizeOk=false;
