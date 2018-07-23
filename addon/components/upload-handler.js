@@ -67,7 +67,10 @@ export default Ember.Component.extend({
               $(data.context).css("display","none");
             }
           }else{
-            component.get("applicationState").setProperties({alertClass:"alert-danger",alertMessage:"You must upload a csv file!"});
+            if (component.get('applicationState')) {
+              console.log('test')
+              component.get("applicationState").setProperties({alertClass:"alert-danger",alertMessage:"You must upload a csv file!"});
+            }
             $(data.context).css("display","none");
           }
       },
